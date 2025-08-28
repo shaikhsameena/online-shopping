@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "1",
+    "Name": "Pain Relief Belt for Men & Women",
+    "Price": "499",
+    "Delivery": "Upto 2 days",
+    "image": "/images/p5.PNG",
+    "amazonLink": "https://www.amazon.in/MSFORT-Adjustable-Sacroiliac-Breathable-Compression/dp/B0FJ1NLF6X/ref=sr_1_6?crid=1QSXUZRDVCSV1&dib=eyJ2IjoiMSJ9.LPyB9tdkzy7Hyp2-lzjHYJREEetRoDrYHCmvLRX-Wb5dV3wQ4Fj-eguEXTTBNkQBiIs8SrowKr3DriDJh9xZTD-_vxBfpo63HRpcfv8D4mIeeyqG7Kp9Vw5gvxsEnZXy37tsDQSIDRXWpIxOC4roya-f_g2lafNdy1O18GyOPME-zgaDbBw4eh8V1KRmVWA6y2nciPRF-_PDTj-KK5WY2PwYeKfoH24IncwIgv_IaEw.UsaHP9kp9AsTouQe6A6EzQQbTgUno3f7osennSVSnf0&dib_tag=se&keywords=msfort&qid=1756033541&sprefix=%2Caps%2C691&sr=8-6",
+    "Reviews": [
+      { "Rating": 5 },
+      { "Rating": 5 },
+      { "Rating": 5 }
+    ]
+  },
+  {
+    "_id": "2",
+    "Name": "Lumbo Sacral Support Belt",
+    "Price": "899",
+    "Delivery": "Upto 3-5 days",
+   "image": "/images/R.png",
+   "amazonLink": "https://www.amazon.in/dp/B0FJ1Y5JT2?ref=cm_sw_r_cso_wa_apin_dp_ERAN5SYB0C1H5QHF7CHF&ref_=cm_sw_r_cso_wa_apin_dp_ERAN5SYB0C1H5QHF7CHF&social_share=cm_sw_r_cso_wa_apin_dp_ERAN5SYB0C1H5QHF7CHF",
+    "Reviews": [
+      { "Rating": 5 },
+      { "Rating": 5 },
+      { "Rating": 5 }
+    ]
+  },
+  {
+    "_id": "3",
+    "Name": "Premium Lumbar Support Belt",
+    "Price": "699",
+    "Delivery": "Upto 2 days",
+    "image": "/images/p4.PNG",
+    "amazonLink": "https://www.amazon.in/MSFORT-Adjustable-Cushioning-Corrector-Recovery/dp/B0FHW1F9JM/ref=sr_1_5?dib=eyJ2IjoiMSJ9.LPyB9tdkzy7Hyp2-lzjHYJREEetRoDrYHCmvLRX-Wb5dV3wQ4Fj-eguEXTTBNkQBiIs8SrowKr3DriDJh9xZTD-_vxBfpo63HRpcfv8D4mIeeyqG7Kp9Vw5gvxsEnZXy37tsDQSIDRXWpIxOC4roya-f_g2lafNdy1O18GyOPME-zgaDbBw4eh8V1KRmVWA6y2nciPRF-_PDTj-KK5WY2PwYeKfoH24IncwIgv_IaEw.ba9enLjlwMWjhW6A2XOeQHzxRzvZ2QC6IeM2ApTkQgs&dib_tag=se&keywords=Msfort&qid=1756031840&sr=8-5",
+    "Reviews": [
+      { "Rating": 5 },
+      { "Rating": 5 }
+    ]
+  }
+]

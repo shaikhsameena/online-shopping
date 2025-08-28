@@ -1,0 +1,286 @@
+
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  margin-top: 150px;
+}
+
+.contact-box {
+  display: flex;
+  gap: 30px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.contact-form, 
+.contact-info {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form h2, 
+.contact-info h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #111;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #fafafa;
+}
+
+.input-group span {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.input-group input, 
+.input-group textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-size: 15px;
+}
+
+.textarea {
+  align-items: flex-start;
+}
+
+.send-btn {
+  background: #001f4d;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #003080;
+}
+
+.contact-info p {
+  margin: 0px 0;
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 500;
+  color: #0056b3;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.social-links a:hover {
+  color: #ff6600;
+}
+
+/* Thank You Box */
+.thankyou-box {
+  margin-top: 50px;
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9f9f9, #eef3ff);
+  border-radius: 10px;
+  border: 1px solid #e1e4eb;
+}
+
+.thankyou-box p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+  text-align: center;
+  margin-right: 90px;
+}
+
+.thankyou-box h3 {
+  margin: 0;
+  color: #001f4d;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.phone-icon {
+  color: green;
+  margin-left: 150px;   /* ❌ negative margin hata diya */
+}
+
+.phone span {
+  margin-left: 15px;  /* bas thoda sa gap text readability ke liye */
+}
+
+
+
+
+/*media Query*/
+
+
+/* ✅ Mobile First Responsive Design */
+
+/* Large screens (default styles) already applied above */
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .contact-box {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .contact-form, 
+  .contact-info {
+    padding: 20px;
+  }
+
+  .contact-info {
+    text-align: center;   /* ✅ tablet pe bhi center */
+  }
+
+  .contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;   /* ✅ text center */
+  }
+
+  .phone {
+    justify-content: center;
+  }
+
+  .social-links {
+    text-align: center;
+  }
+
+  .social-links a {
+    display: inline-block;  /* ✅ ek line me center */
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .thankyou-box {
+    margin-top: 30px;
+    padding: 12px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    margin-top: 80px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;  /* ✅ mobile pe bhi center */
+  }
+
+  .contact-info p {
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  .send-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .phone {
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .phone-icon {
+    margin-left: 0;
+  }
+
+  .phone span {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .social-links {
+    text-align: center;
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 6px 10px;
+  }
+
+  .thankyou-box {
+    margin-top: 20px;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-form, 
+  .contact-info {
+    padding: 15px;
+  }
+
+  .contact-form h2, 
+  .contact-info h2 {
+    font-size: 18px;
+  }
+
+  .input-group input, 
+  .input-group textarea {
+    font-size: 14px;
+  }
+
+  .send-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .thankyou-box p {
+    font-size: 14px;
+  }
+
+  .thankyou-box h3 {
+    font-size: 16px;
+  }
+}
+
