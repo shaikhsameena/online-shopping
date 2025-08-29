@@ -1,7 +1,7 @@
 import React from 'react';
 import './Testimonials.css';
 
-/* Import avatars */
+
 import vikramAvatar from '../assets/vikram.jpg';
 import priyaAvatar from '../assets/priya.jpg';
 import ravindraAvatar from '../assets/ravindra.jpg';

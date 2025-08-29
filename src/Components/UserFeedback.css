@@ -1,14 +1,14 @@
-/* Container Layout */
+
 .promo-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
   margin: 60px auto 0 auto;
-  padding: 0 20px; /* Match testimonial section */
+  padding: 0 20px; 
   max-width: 1200px;
 }
 
-/* Card Base Styles */
+
 .promo-large-card,
 .promo-small-card {
   position: relative;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-/* Heights */
+
 .promo-large-card {
   height: 100%;
   min-height: 504px;
@@ -33,7 +33,7 @@
   height: 240px;
 }
 
-/* Image Style */
+
 .promo-large-card img,
 .promo-small-card img {
   position: absolute;
@@ -46,7 +46,7 @@
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* Dark Overlay */
+
 
 .promo-large-card::before,
 .promo-small-card::before {
@@ -60,23 +60,23 @@
   z-index: 2;
 }
 
-/* Hover Effects */
+
 .promo-large-card:hover img,
 .promo-small-card:hover img {
   transform: scale(1.1);
   filter: brightness(1.15);
 }
 
-/* Text Content */
-/* Text Content */
+
+
 .promo-content {
-  position: absolute; /* fix inside card */
-  top: 50%;           /* vertically center */
-  left: 50%;          /* horizontally center */
-  transform: translate(-50%, -50%); /* exact center */
+  position: absolute; 
+  top: 50%;           
+  left: 50%;          
+  transform: translate(-50%, -50%); 
   z-index: 3;
   color: #fff;
-  text-align: center; /* center align text */
+  text-align: center; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,7 +98,7 @@
 }
 
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .promo-wrapper {
     grid-template-columns: 1fr;

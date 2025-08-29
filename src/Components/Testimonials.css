@@ -100,7 +100,7 @@
   }
 
   .testimonial-grid {
-    grid-template-columns: 1fr;   /* single column */
+    grid-template-columns: 1fr;   
     gap: 1.5rem;
   }
 
@@ -121,12 +121,12 @@
     margin-bottom: 1rem;
     color: #333;
     text-align: center;
-    left: 0;                 /* reset desktop shift */
-    padding: 0 10px;         /* small side padding only */
+    left: 0;                 
+    padding: 0 10px;         
   }
 
   .reviewer-info {
-    flex-direction: column;   /* avatar + text stack vertically */
+    flex-direction: column;   
     align-items: center;
     gap: 0.4rem;
     text-align: center;

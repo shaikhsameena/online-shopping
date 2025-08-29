@@ -1,13 +1,13 @@
-// Footer.jsx
+
 import React from "react";
 import "./Footer.css";
-import GPayLogo from "../assets/Gpay.png"; // ✅ Make sure file name and path are correct
+import GPayLogo from "../assets/Gpay.png"; 
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left Columns */}
+        
         <div className="footer-left">
           <div className="footer-col">
             <h4 className="footer-heading">Resources</h4>
@@ -31,13 +31,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Center Section */}
+       
         <div className="footer-center">
           <p className="footer-slogan">Reliable Care, Right to your Door.</p>
           <div className="footer-line"></div>
         </div>
 
-        {/* Right Section */}
+        
         <div className="footer-right">
           <h4 className="address-title">Registered Office Address</h4>
          
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Bottom */}
+     
       <div className="footer-bottom">
         <p>© All rights reserved</p>
 

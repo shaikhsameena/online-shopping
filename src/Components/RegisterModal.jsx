@@ -154,7 +154,7 @@ export default function RegisterModal({ onClose, userInfo }) {
 
       <ToastContainer />
 
-      {/* ✅ Embedded UI styles */}
+  
       <style>{`
         .custom-modal .modal-content {
           border-radius: 16px;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useMemo } from "react";
-// Font Awesome link index.html me rahe
+
 
 const InfoCards = () => {
-  // ✅ media-queries via JS (inline styles ke saath)
+  
   const [isPhone, setIsPhone] = useState(false);
   const [isSmallPhone, setIsSmallPhone] = useState(false);
 
@@ -24,7 +24,7 @@ const InfoCards = () => {
     };
   }, []);
 
-  // ✅ responsive style overrides (inline hi)
+  
   const sectionStyle = useMemo(
     () => ({
       ...styles.section,
@@ -147,7 +147,7 @@ const InfoCards = () => {
   );
 };
 
-// Base styles
+
 const styles = {
   section: { padding: "60px 20px", fontFamily: "'Inter', sans-serif" },
   grid: {

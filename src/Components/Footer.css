@@ -1,4 +1,4 @@
-/* Base Footer Styles */
+
 .footer {
   background-color: white;
   padding: 40px 20px;
@@ -84,13 +84,27 @@
   
 }
 
-.footer-right text {
-/* margin: 5px 0;*/
+.footer-right .text{
+  display: block;
   font-size: 16px;
   color: #0b2239;
-  margin-left: 100px;
-  margin-right: 40px;
   
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  margin: 0;             
+}
+
+
+.footer-right .address-title{
+  margin-bottom: 8px;
+}
+
+
+.footer-right{
+  max-width: 100%;
+  text-align: left !important;   
 }
 strong{
   margin-right: 10px;
@@ -99,7 +113,7 @@ strong{
   margin-left: -110px;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
   margin-top: 40px;
   border-top: 1px solid #d9e1ec;
@@ -145,9 +159,7 @@ strong{
   text-decoration: underline;
 }
 
-/* ─────────── Responsive Styles ─────────── */
-/* ========= Tablet (≤1024px) ========= */
-/* =============== Large Tablet / Small Laptop (≤1200px) =============== */
+
 @media (max-width: 1200px) {
   .footer { padding: 48px 24px; }
   .footer-container { padding: 0 24px; gap: 32px; }
@@ -156,8 +168,7 @@ strong{
   .footer-line { height: 140px; }
 }
 
-/* ======================= Tablet (≤992px) ======================= */
-/* clean stacking + tidy spacing, real-site look */
+
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
@@ -166,9 +177,9 @@ strong{
     padding: 0 24px;
   }
 
-  /* left block stays grouped; center line hidden */
+  
   .footer-line { display: none; }
-  .footer-center { order: 3; margin-top: 6px; } /* slogan below lists */
+  .footer-center { order: 3; margin-top: 6px; } 
   .footer-slogan { text-align: center; font-size: 19px; }
 
   .footer-right { max-width: 100%; }
@@ -185,14 +196,12 @@ strong{
   .payment-logos img { width: 50px; opacity: .7; }
 }
 
-/* ========================= Phone (≤768px) ========================= */
-/* two columns for Resources/My Account, address full width; 
-   everything left-start but overall layout centered */
+
 @media (max-width: 768px) {
   .footer { padding: 36px 20px; }
   .footer-container { padding: 0 16px; }
 
-  /* 2-up grid for columns */
+  
   .footer-left{
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0,1fr)) !important;
@@ -206,19 +215,22 @@ strong{
   .footer-col ul{ padding-left: 0; margin-left: 0; }
   .footer-col li{ font-size: 15px; margin-bottom: 10px; }
 
-  /* Address */
+  
   .footer-right{
     text-align: left !important;
     width: 100%;
     margin-top: 8px;
+    margin-left: 20px;
+    text-align: center;
   }
+
   .footer-right .address-title{ font-size: 18px; }
   .footer-right .text{ margin: 6px 0 0 0 !important; font-size: 15px; }
 
-  /* slogan */
+ 
   .footer-slogan{ font-size: 18px; text-align: center; margin: 8px 0 0; }
 
-  /* bottom bar */
+ 
   .footer-bottom{
     padding: 16px 16px;
     gap: 14px;
@@ -237,7 +249,7 @@ strong{
   .footer-links span{ margin-left: 0; font-size: 13px; }
 }
 
-/* ===================== Small phones (≤480px) ===================== */
+
 @media (max-width: 480px) {
   .footer-col h4.footer-heading{ font-size: 16px; }
   .footer-col li{ font-size: 14px; }
@@ -248,3 +260,18 @@ strong{
   .footer-bottom p, .footer-links span{ font-size: 12px; }
 }
 
+@media (max-width: 768px){
+  .footer-right{
+    width: 100%;
+    margin: 8px 0 0 0;           
+    text-align: left !important;  
+  }
+  .footer-right .text{
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 480px){
+  .footer-right .text{ font-size: 14px; }
+}

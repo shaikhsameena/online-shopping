@@ -17,6 +17,7 @@ const HeroSection = () => {
           width: '100%',
           height: 'auto',
           display: 'block',
+          
         }}
       />
     </section>
