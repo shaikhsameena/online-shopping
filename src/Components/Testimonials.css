@@ -1,7 +1,7 @@
 #testimonials {
   background-color: #ffffff;
   padding:200px 100px;
-  margin-top: -100px;
+  margin-top: 100px;
   margin-bottom: -100px;
 }
 
@@ -9,14 +9,16 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
+  margin-top: -40px;
 }
 
-/* Responsive grid */
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 0;
+  
 }
 
 .testimonial-card-modern {
@@ -87,11 +89,12 @@
   margin: 0;
 }
 
-/* Responsive tweaks for smaller devices */
+
 @media (max-width: 768px) {
   #testimonials {
-    padding: 40px 20px;   /* reduce padding on mobile */
-    margin: 0;            /* remove negative margins */
+    padding: 40px 20px;   
+    margin: 0;
+    margin-top: -20px;           
   }
 
   .section-heading {
@@ -108,6 +111,7 @@
     max-width: 100%;
     padding: 1rem;
     border-radius: 20px;
+    margin-top: -20px;
   }
 
   .stars {

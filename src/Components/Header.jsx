@@ -3,6 +3,17 @@ import { useSelector } from "react-redux";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
 
+const DisabledIcon = ({ className = "", title = "", children }) => (
+  <span
+    className={`icon-btn disabled-icon ${className}`}
+    title={title}
+    aria-disabled="true"
+    tabIndex={-1}
+  >
+    {children}
+  </span>
+);
+
 const Header = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showHelpHint, setShowHelpHint] = useState(true);
@@ -21,14 +32,12 @@ const Header = () => {
     }
   };
 
- 
   useEffect(() => {
     const onScroll = () => setShowScrollBtn(window.scrollY > 200);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  
   useEffect(() => {
     const underline = document.getElementById("underline");
     const activeLink = document.querySelector(".nav-link.active");
@@ -38,24 +47,20 @@ const Header = () => {
     }
   }, [location.pathname]);
 
-  
   useEffect(() => {
     setIsMobileNavOpen(false);
   }, [location.pathname]);
 
-  
   useEffect(() => {
     document.body.style.overflow = isMobileNavOpen ? "hidden" : "";
     return () => (document.body.style.overflow = "");
   }, [isMobileNavOpen]);
 
-  
   useEffect(() => {
     const timer = setTimeout(() => setShowHelpHint(false), 8000);
     return () => clearTimeout(timer);
   }, []);
 
-  
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") setIsMobileNavOpen(false);
@@ -64,7 +69,6 @@ const Header = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth > 768) setIsMobileNavOpen(false);
@@ -87,7 +91,7 @@ const Header = () => {
 
   return (
     <>
-      
+     
       <div className="sticky-wrapper desktop-header">
         <header className="main-header">
           <div className="logo" onClick={handleLogoClick}>
@@ -99,7 +103,9 @@ const Header = () => {
               <NavLink
                 key={it.to}
                 to={it.to}
-                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
               >
                 {it.label}
               </NavLink>
@@ -108,7 +114,7 @@ const Header = () => {
           </nav>
 
           <div className="header-right">
-          
+            
             <div className="search-box">
               <input
                 type="text"
@@ -121,19 +127,20 @@ const Header = () => {
               <i className="fas fa-search search-icon" />
             </div>
 
-            <NavLink to="/wishlist" className="icon-btn">
+           
+            <DisabledIcon title="Wishlist (disabled)">
               <i className="fas fa-heart" />
-            </NavLink>
+            </DisabledIcon>
 
-            
-            <div className="icon-btn cart-icon" title="Cart (view disabled)">
+           
+            <DisabledIcon className="cart-icon" title="Cart (disabled)">
               <i className="fas fa-shopping-cart" />
-            </div>
+            </DisabledIcon>
           </div>
         </header>
       </div>
 
-      
+     
       <div className="mobile-header">
         <div className="mobile-header-top">
           <button
@@ -144,7 +151,9 @@ const Header = () => {
             aria-controls="mobile-drawer"
             onClick={() => setIsMobileNavOpen((p) => !p)}
           >
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
 
           <div className="logo" onClick={handleLogoClick}>
@@ -164,13 +173,14 @@ const Header = () => {
           </div>
 
           <div className="mobile-icons">
-            <NavLink to="/wishlist" className="icon-btn">
+            <DisabledIcon title="Wishlist (disabled)">
               <i className="fas fa-heart" />
-            </NavLink>
-            <NavLink to="/cart" className="icon-btn cart-icon">
+            </DisabledIcon>
+
+            <DisabledIcon className="cart-icon" title="Cart (disabled)">
               <i className="fas fa-shopping-cart" />
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-            </NavLink>
+            
+            </DisabledIcon>
           </div>
         </div>
 
@@ -179,7 +189,6 @@ const Header = () => {
           className={`mobile-drawer ${isMobileNavOpen ? "open" : ""}`}
           aria-hidden={!isMobileNavOpen}
         >
-          
           <button
             type="button"
             className="drawer-backdrop"
@@ -187,7 +196,12 @@ const Header = () => {
             onClick={() => setIsMobileNavOpen(false)}
           />
 
-          <div className="drawer-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+          <div
+            className="drawer-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
+          >
             <div className="drawer-header">
               <strong>Menu</strong>
               <button
@@ -205,7 +219,9 @@ const Header = () => {
                 <NavLink
                   key={it.to}
                   to={it.to}
-                  className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
                   onClick={() => setIsMobileNavOpen(false)}
                 >
                   {it.label}
@@ -216,24 +232,44 @@ const Header = () => {
         </div>
       </div>
 
-     
+      
       {showScrollBtn && showHelpHint && (
         <div className="help-hint-box">
           <span>💬 Need help? Chat or WhatsApp us!</span>
-          <button className="close-hint" onClick={() => setShowHelpHint(false)}>&times;</button>
+          <button
+            className="close-hint"
+            onClick={() => setShowHelpHint(false)}
+          >
+            &times;
+          </button>
         </div>
       )}
 
-      
+     
       {showScrollBtn && (
         <div className="floating-button-group">
-          <button type="button" className="floating-btn scroll-btn" onClick={scrollToTop} title="Scroll to Top">
+          <button
+            type="button"
+            className="floating-btn scroll-btn"
+            onClick={scrollToTop}
+            title="Scroll to Top"
+          >
             <i className="fas fa-arrow-up" />
           </button>
-          <button type="button" className="floating-btn whatsapp-btn" onClick={openWhatsApp} title="Chat on WhatsApp">
+          <button
+            type="button"
+            className="floating-btn whatsapp-btn"
+            onClick={openWhatsApp}
+            title="Chat on WhatsApp"
+          >
             <i className="fab fa-whatsapp" />
           </button>
-          <button type="button" className="floating-btn chat-btn" onClick={openChat} title="Live Chat">
+          <button
+            type="button"
+            className="floating-btn chat-btn"
+            onClick={openChat}
+            title="Live Chat"
+          >
             💬
           </button>
         </div>

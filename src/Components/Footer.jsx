@@ -69,11 +69,42 @@ const Footer = () => {
           <img src={GPayLogo} alt="Google Pay" width="50" />
         </div>
 
-        <div className="footer-icons">
-          <i className="fab fa-facebook-f"></i>
-          <i className="fab fa-x-twitter"></i>
-          <i className="fab fa-instagram"></i>
-        </div>
+ <div className="footer-icons">
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61578060466582"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="MSFORT on Facebook"
+    title="Facebook"
+  >
+    <i className="fab fa-facebook-f"></i>
+  </a>
+
+
+  <a
+    href="https://x.com/msfort_official"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="MSFORT on X"
+    title="X (Twitter)"
+  >
+    <i className="fab fa-x-twitter"></i>
+  </a>
+
+
+  <a
+    href="https://www.instagram.com/msfort_official/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="MSFORT on Instagram"
+    title="Instagram"
+  >
+    <i className="fab fa-instagram"></i>
+  </a>
+</div>
+
+
 
         <div className="footer-links">
           <span>Privacy Policy</span>

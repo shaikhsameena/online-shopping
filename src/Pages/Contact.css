@@ -21,6 +21,7 @@
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  
 }
 
 .contact-form h2, 
@@ -28,6 +29,7 @@
   margin-bottom: 15px;
   font-size: 24px;
   color: #111;
+  
 }
 
 .input-group {
@@ -117,7 +119,7 @@
   margin: 5px 0;
   color: #333;
   text-align: center;
-  margin-right: 90px;
+  margin-right: 30px;
 }
 
 .thankyou-box h3 {
@@ -136,23 +138,17 @@
 
 .phone-icon {
   color: green;
-  margin-left: 150px;   /* ❌ negative margin hata diya */
+  margin-left: 150px;  
 }
 
 .phone span {
-  margin-left: 15px;  /* bas thoda sa gap text readability ke liye */
+  margin-left: 15px; 
 }
 
 
 
 
-/*media Query*/
 
-
-/* ✅ Mobile First Responsive Design */
-
-/* Large screens (default styles) already applied above */
-/* Tablets (max-width: 992px) */
 @media (max-width: 992px) {
   .contact-box {
     flex-direction: column;
@@ -165,13 +161,13 @@
   }
 
   .contact-info {
-    text-align: center;   /* ✅ tablet pe bhi center */
+    text-align: center;   
   }
 
   .contact-info p {
     font-size: 14px;
     margin: 5px 0;
-    text-align: center;   /* ✅ text center */
+    text-align: center;   
   }
 
   .phone {
@@ -183,7 +179,7 @@
   }
 
   .social-links a {
-    display: inline-block;  /* ✅ ek line me center */
+    display: inline-block; 
     margin: 5px 10px;
     font-size: 14px;
   }
@@ -194,7 +190,7 @@
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
+
 @media (max-width: 768px) {
   .contact-container {
     margin-top: 80px;
@@ -212,7 +208,7 @@
   }
 
   .contact-info {
-    text-align: center;  /* ✅ mobile pe bhi center */
+    text-align: center;  
   }
 
   .contact-info p {
@@ -253,7 +249,7 @@
   }
 }
 
-/* Extra Small Devices (max-width: 480px) */
+
 @media (max-width: 480px) {
   .contact-form, 
   .contact-info {
@@ -270,10 +266,35 @@
     font-size: 14px;
   }
 
-  .send-btn {
-    font-size: 13px;
-    padding: 8px;
-  }
+ .send-btn {
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, .25);
+}
+.send-btn:hover { transform: translateY(-1px); }
+.send-btn:active { transform: translateY(0); opacity: .9; }
+
+
+.input-group input,
+.input-group textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,.2);
+}
+
 
   .thankyou-box p {
     font-size: 14px;
@@ -283,4 +304,20 @@
     font-size: 16px;
   }
 }
+.popup {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 

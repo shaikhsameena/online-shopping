@@ -15,6 +15,7 @@ import Contact from './Pages/Contact';
 import { store } from './redux/store';
 import { Provider } from "react-redux";
 
+
 import Profile from './Pages/profile/Profile';
 
 function App() {
