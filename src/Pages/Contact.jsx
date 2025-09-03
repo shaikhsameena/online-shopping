@@ -10,7 +10,7 @@ const RECEIVER_EMAIL =
 
 const ACCESS_KEY =
   import.meta?.env?.VITE_WEB3FORMS_ACCESS_KEY ||
-  "81aa464a-f558-4660-bf95-7982a5a78769";
+  "a56e3c3e-ea70-4a7e-a06b-0b9753d4f4e8";
 
 const isUUID = (k) =>
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
@@ -47,7 +47,7 @@ Sent from MSFORT Contact Page`;
     if (sending) return;
 
     if (!isUUID(ACCESS_KEY)) {
-      showPopup("❌ Invalid Web3Forms Access Key. कृपया सही key लगाएँ.");
+      showPopup("❌ Invalid Web3Forms Access Key.");
       return;
     }
 
@@ -59,7 +59,7 @@ Sent from MSFORT Contact Page`;
 
     if (website) return;
     if (!name || !email || !message) {
-      showPopup("⚠️ कृपया सभी फ़ील्ड भरें।");
+      showPopup("⚠️ Required entries to be filled");
       return;
     }
 
