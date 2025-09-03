@@ -1,32 +1,54 @@
-import React, { useState, useEffect } from "react";
-import img4 from "../assets/z3.PNG";
-import img1 from "../assets/m.png";
-import img2 from "../assets/z1.PNG";
-import img3 from "../assets/z2.PNG";
-
+import React, { useEffect, useMemo, useState } from "react";
+import img1 from "../assets/S1.jpeg";
+import img2 from "../assets/s2.jpeg";
+import img3 from "../assets/S3.jpeg";
 import "./HeroSection.css";
 
-const HeroSection = () => {
-  const images = [img4, img2, img3, img1];
-  const [currentIndex, setCurrentIndex] = useState(0);
+const SLIDE_MS = 3000;   
+const ANIM_MS  = 600;    
 
+const HeroSection = () => {
+ 
+  const baseImages = useMemo(() => [img1, img2, img3], []);
+  
+  const slides = useMemo(
+    () => [baseImages[baseImages.length - 1], ...baseImages, baseImages[0]],
+    [baseImages]
+  );
+
+  const [index, setIndex] = useState(1);     
+  const [instant, setInstant] = useState(false); 
+
+ 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length  -1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+    const id = setInterval(() => setIndex((i) => i + 1), SLIDE_MS);
+    return () => clearInterval(id);
+  }, []);
+
+  
+  const onTransitionEnd = () => {
+    if (index === slides.length - 1) {
+      
+      setInstant(true);
+      setIndex(1);
+      setTimeout(() => setInstant(false), 20);
+    } else if (index === 0) {
+      
+      setInstant(true);
+      setIndex(slides.length - 2);
+      setTimeout(() => setInstant(false), 20);
+    }
+  };
 
   return (
     <section className="hero-section">
       <div
-        className="hero-slider"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        className={`hero-slider ${instant ? "no-transition" : ""}`}
+        style={{ transform: `translateX(-${index * 100}%)` }}
+        onTransitionEnd={onTransitionEnd}
       >
-        {images.map((image, index) => (
-          <img key={index} src={image} alt="Hero" className="hero-image" />
+        {slides.map((src, i) => (
+          <img key={i} src={src} alt={`Hero ${i + 1}`} className="hero-image" />
         ))}
       </div>
     </section>

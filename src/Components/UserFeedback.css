@@ -1,4 +1,4 @@
-/* ✅ Main wrapper */
+
 .promo-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -8,7 +8,7 @@
   max-width: 1200px;
 }
 
-/* ✅ Card styles */
+
 .promo-large-card,
 .promo-small-card {
   position: relative;
@@ -34,7 +34,7 @@
   height: 240px;
 }
 
-/* ✅ Images */
+
 .promo-large-card img,
 .promo-small-card img {
   position: absolute;
@@ -59,14 +59,14 @@
   z-index: 2;
 }
 
-/* Hover effect */
+
 .promo-large-card:hover img,
 .promo-small-card:hover img {
   transform: scale(1.1);
   filter: brightness(1.15);
 }
 
-/* ✅ Text overlay */
+
 .promo-content {
   position: absolute;
   top: 30px;
@@ -90,6 +90,35 @@
   font-weight: 400;
   color: #f0f0f0;
   margin-left: 5px;
+}
+
+
+
+
+
+
+
+.promo-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.promo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promo-content {
+  position: absolute; 
+  left: 0; right: 0; bottom: 0;
+ 
+}
+.promo-card:focus-visible {
+  outline: 2px solid #111; 
+  outline-offset: 2px;
 }
 
 

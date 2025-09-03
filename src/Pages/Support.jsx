@@ -14,7 +14,7 @@ const Support = () => {
   };
 
  
-  const SUPPORT_EMAIL = "mjtechprofessionals@gmail.com";
+  const SUPPORT_EMAIL = "mjandsrjtrading@gmail.com";
   const DEFAULT_SUBJECT = "MSFORT Support Request";
   const DEFAULT_BODY =
     `Hello MSFORT Team,%0D%0A%0D%0A` +
