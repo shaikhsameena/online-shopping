@@ -8,6 +8,7 @@ import { routes } from "./Router/routes";
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
+
 import Service from './Pages/Service';
 import Product from './Pages/Product';
 import Support from './Pages/Support';
@@ -18,6 +19,7 @@ import { Provider } from "react-redux";
 
 import Profile from './Pages/profile/Profile';
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -27,15 +29,20 @@ function App() {
           <main className="content-wrap">
             <Routes>
               <Route path="/" element={<Home />} />
+              
+
               <Route path="/profile" element={<Profile />} />
               <Route path="/service" element={<Service />} />
               <Route path="/product" element={<Product />} />
               <Route path="/support" element={<Support />} />
               <Route path="/contact" element={<Contact />} />
               
+              
+
+              
             </Routes>
           </main>
-          <Footer />
+          <Footer/>
         </div>
       </Router>
     </Provider>

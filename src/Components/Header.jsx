@@ -14,6 +14,8 @@ const DisabledIcon = ({ className = "", title = "", children }) => (
   </span>
 );
 
+
+
 const Header = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showHelpHint, setShowHelpHint] = useState(true);
@@ -78,7 +80,7 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  const openWhatsApp = () => window.open("https://wa.me/919876543210", "_blank");
+  const openWhatsApp = () => window.open("https://wa.me/8310746852", "_blank");
   const openChat = () => alert("Chat coming soon!");
 
   const items = [
@@ -87,6 +89,7 @@ const Header = () => {
     { to: "/product", label: "Products" },
     { to: "/support", label: "Supports" },
     { to: "/contact", label: "Contact" },
+    { to: "/buy", label: "Buy" },
   ];
 
   return (
@@ -160,22 +163,23 @@ const Header = () => {
             <img src="src/assets/logo.png" alt="logo" />
           </div>
 
-          <div className="search-box disabled">
+          <div className="search-box ">
             <input
               type="text"
               placeholder="Search disabled"
               value={searchInput}
               onChange={() => {}}
               onKeyDown={(e) => e.preventDefault()}
-              disabled
+              
             />
             <i className="fas fa-search search-icon" />
           </div>
 
           <div className="mobile-icons">
-            <DisabledIcon title="Wishlist (disabled)">
+            <div title="Wishlist (disabled)">
               <i className="fas fa-heart" />
-            </DisabledIcon>
+              </div>
+            
 
             <DisabledIcon className="cart-icon" title="Cart (disabled)">
               <i className="fas fa-shopping-cart" />

@@ -1,9 +1,10 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: clamp(260px, 48vw, 620px);
+  height: clamp(260px, 38vw, 620px);
   overflow: hidden;
   background: #000;
+
 }
 
 .hero-slider {

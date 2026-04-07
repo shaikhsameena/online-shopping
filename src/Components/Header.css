@@ -8,7 +8,7 @@ body { padding-top: 96px; }
 
 .main-header { display: flex; justify-content: space-between; align-items: center; padding: 18px 3%; }
 .logo { cursor: pointer; }
-.logo img { height: 50px; object-fit: contain; transition: transform .2s ease; }
+.logo img { height: 90px; object-fit: contain; transition: transform .2s ease; }
 .logo img:hover { transform: scale(1.05); cursor: pointer; }
 
 

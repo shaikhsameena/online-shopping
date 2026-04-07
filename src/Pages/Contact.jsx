@@ -5,11 +5,10 @@ import {
   FaFacebook, FaInstagram, FaWhatsapp, FaPhoneAlt
 } from "react-icons/fa";
 
-const RECEIVER_EMAIL =
-  "mjandsrjtrading@gmail.com";
+const RECEIVER_EMAIL = "shaikhsameena@gmail.com";
 
 const ACCESS_KEY =
-  import.meta?.env?.VITE_WEB3FORMS_ACCESS_KEY ||
+  import.meta?.env?.VITE_8310746852_ACCESS_KEY ||
   "a56e3c3e-ea70-4a7e-a06b-0b9753d4f4e8";
 
 const isUUID = (k) =>
@@ -24,23 +23,30 @@ const Contact = () => {
 
   const showPopup = (msg, ms = 5000) => {
     setPopup({ show: true, msg });
-    // auto close
     setTimeout(() => setPopup({ show: false, msg: "" }), ms);
   };
   const hidePopup = () => setPopup({ show: false, msg: "" });
 
   const buildSubject = (name, email) =>
-    `MSFORT Contact: ${name} (${email})`;
+    ` Contact: ${name} (${email})`;
 
-  const buildBody = (name, email, message) =>
-`Name: ${name}
-Email: ${email}
+ 
+  const buildBody = (name, email, message) => 
+`Hi  Support,
 
-Message:
+Here is what i need help with, 
+
+Message Body :
 ${message}
 
-------------
-Sent from MSFORT Contact Page`;
+Here is my contact 
+
+Name : ${name}
+Email : ${email}
+
+
+Thanks,
+ Support.`;
 
   const sendDirect = async (e) => {
     e.preventDefault();
@@ -63,10 +69,9 @@ Sent from MSFORT Contact Page`;
       return;
     }
 
-    
     fd.set("access_key", ACCESS_KEY);
     fd.set("to", RECEIVER_EMAIL);
-    fd.set("from_name", "MSFort Contact Form");
+    fd.set("from_name", " Contact Form");
     fd.set("subject", buildSubject(name, email));
     fd.set("message", buildBody(name, email, message));
     fd.set("name", name);
@@ -76,14 +81,14 @@ Sent from MSFORT Contact Page`;
 
     setSending(true);
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("shiakhsameena@gmail.com", {
         method: "POST",
         body: fd,
       });
       const data = await res.json();
 
       if (data.success) {
-        showPopup("Message has been sent, MSFort helpdesk will reach out to you soon !");
+        showPopup(" Massage has been sent,  helpdesk will reach out to you soon !");
         formRef.current.reset();
       } else {
         console.error("Web3Forms error:", data);
@@ -105,7 +110,6 @@ Sent from MSFORT Contact Page`;
           <h2>Send us a Message</h2>
 
           <form ref={formRef} onSubmit={sendDirect}>
-            
             <input
               type="text"
               name="website"
@@ -140,22 +144,21 @@ Sent from MSFORT Contact Page`;
           </form>
         </div>
 
-       
         <div className="contact-info">
           <h2>Reach Us</h2>
           <p>We’d love to hear from you! ❤️</p>
-          <p>📍 Nutan Vasahat, Ambad Road Old Jalna, Maharashtra, India</p>
-          <p>📧 mjandsrjtrading@gmail.com</p>
+          <p>📍 Ameerpet, hyderabad, Telangana, India</p>
+          <p>📧 shaikhsameena995@gmail.com</p>
 
           <p className="phone">
             <FaPhoneAlt className="phone-icon" />
-            <span>+91 8149829233</span>
+            <span>+91 8310746852</span>
           </p>
 
           <div className="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61578060466582"><FaFacebook /> Facebook</a>
-            <a href="https://www.instagram.com/msfort_official/"><FaInstagram /> Instagram</a>
-            <a href="https://wa.me/918149829233" target="_blank" rel="noopener noreferrer">
+            <a href="#"><FaFacebook /> Facebook</a>
+            <a href="https://www.instagram.com/shaik_ayra01/"><FaInstagram /> Instagram</a>
+            <a href="https://wa.me/918310746852" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp /> WhatsApp
             </a>
           </div>
@@ -167,7 +170,6 @@ Sent from MSFORT Contact Page`;
         </div>
       </div>
 
-     
       {popup.show && (
         <div
           className="popup-overlay"

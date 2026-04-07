@@ -14,10 +14,10 @@ const Support = () => {
   };
 
  
-  const SUPPORT_EMAIL = "mjandsrjtrading@gmail.com";
-  const DEFAULT_SUBJECT = "MSFORT Support Request";
+  const SUPPORT_EMAIL = "shaikhsameena995@gmail.com";
+  const DEFAULT_SUBJECT = " Support Request";
   const DEFAULT_BODY =
-    `Hello MSFORT Team,%0D%0A%0D%0A` +
+    `Hello ,%0D%0A%0D%0A` +
     `I need help with: [order/product/returns].%0D%0A` +
     `Order ID (if any): %0D%0A` +
     `Phone (optional): %0D%0A%0D%0A` +
@@ -71,7 +71,7 @@ const Support = () => {
               type="button"
               onClick={handleEmailClick}
               className="support-btn"
-              aria-label="Email MSFORT support (opens Gmail or your email app)"
+              aria-label="Email support (opens Gmail or your email app)"
             >
               Email Us
             </button>
@@ -83,11 +83,11 @@ const Support = () => {
   <h3>Live Chat (WhatsApp)</h3>
   <p>Need quick help? Start a WhatsApp chat with one of our agents now.</p>
   <a
-    href="https://wa.me/918149829233?text=Hello%20MSFORT%20Team%2C%20I%20need%20support."
+    href="https://wa.me/918310746852?text=Hello%20MSFORT%20Team%2C%20I%20need%20support."
     target="_blank"
     rel="noopener noreferrer"
     className="support-btn"
-    aria-label="Start WhatsApp chat with MSFORT"
+    aria-label="Start WhatsApp chat with us"
   >
     Chat Now
   </a>
@@ -99,7 +99,7 @@ const Support = () => {
             <i className="fas fa-phone-alt" aria-hidden="true"></i>
             <h3>Call Us</h3>
             <p>Prefer speaking to someone? Give us a call and we’ll be happy to assist you.</p>
-            <a href="tel:+918149829233" className="support-btn" aria-label="Call MSFORT support">
+            <a href="tel:+918310746852" className="support-btn" aria-label="Call  support">
               Call Now
             </a>
           </div>

@@ -21,17 +21,17 @@
 
 .promo-large-card {
   height: 100%;
-  min-height: 500px;
+  min-height: 700px;
 }
 
 .promo-small-cards {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
 .promo-small-card {
-  height: 240px;
+  height: 350px;
 }
 
 
@@ -159,11 +159,11 @@
   }
 
   .promo-large-card {
-    min-height: 240px;
+    min-height: 380px;
   }
 
   .promo-small-card {
-    height: 200px;
+    height: 400px;
   }
 
   .promo-content {

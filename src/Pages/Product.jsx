@@ -7,7 +7,8 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import "./Product.css";
-import productsData from "../data/products.json"; 
+import productsData from "../data/products.json";
+
 
 const InfoCards = () => {
   return (
@@ -252,7 +253,9 @@ const Product = () => {
       </div>
 
       <InfoCards />
+      
     </div>
+    
   );
 };
 
