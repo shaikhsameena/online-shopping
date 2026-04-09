@@ -5,7 +5,7 @@ import {
   FaFacebook, FaInstagram, FaWhatsapp, FaPhoneAlt
 } from "react-icons/fa";
 
-const RECEIVER_EMAIL = "shaikhsameena@gmail.com";
+const RECEIVER_EMAIL = "shaikhsameena995@gmail.com";
 
 const ACCESS_KEY =
   import.meta?.env?.VITE_8310746852_ACCESS_KEY ||
@@ -81,7 +81,7 @@ Thanks,
 
     setSending(true);
     try {
-      const res = await fetch("shiakhsameena@gmail.com", {
+      const res = await fetch("shaikhsameena995@gmail.com", {
         method: "POST",
         body: fd,
       });
@@ -165,7 +165,7 @@ Thanks,
 
           <div className="thankyou-box">
             <p>🙏 Thank you for visiting!</p>
-            <h3>— MSFort Team</h3>
+            <h3>— shopify Team</h3>
           </div>
         </div>
       </div>

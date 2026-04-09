@@ -83,7 +83,7 @@ const Support = () => {
   <h3>Live Chat (WhatsApp)</h3>
   <p>Need quick help? Start a WhatsApp chat with one of our agents now.</p>
   <a
-    href="https://wa.me/918310746852?text=Hello%20MSFORT%20Team%2C%20I%20need%20support."
+    href="https://wa.me/918310746852?text=Hello%20shopify%20Team%2C%20I%20need%20support."
     target="_blank"
     rel="noopener noreferrer"
     className="support-btn"

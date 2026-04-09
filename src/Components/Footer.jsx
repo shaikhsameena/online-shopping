@@ -44,8 +44,8 @@ const Footer = () => {
            <strong> MJ AND SRJ TRADING</strong><br/>
             <p className="text">
             NUTAN VASHAT,<br />
-            AMBAD ROAD OLD JALNA<br />
-            Maharashtra, India<br />
+            Ameerpet, hyderabad,<br />
+            Telangana, India<br />
             8149829233
           </p>
         </div>

@@ -211,9 +211,9 @@ body { padding-top: 96px; }
     pointer-events: none;
   }
 }
-.disabled-icon {
+/*.disabled-icon {
   pointer-events: none; 
   cursor: default;
   opacity: 1;         
-}
+}*/
 

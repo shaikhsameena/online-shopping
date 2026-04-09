@@ -4,8 +4,8 @@ import "./FAQSection.css";
 
 const faqs = [
   {
-    question: "What is MSFORT?",
-    answer: "MSFORT is an eCommerce platform that offers tech products with support and service."
+    question: "What is  Shopify?",
+    answer: " shopify is an eCommerce platform that offers tech products with support and service."
   },
   {
     question: "How do I place an order?",

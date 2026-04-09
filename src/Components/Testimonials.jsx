@@ -9,19 +9,18 @@ import ravindraAvatar from '../assets/ravindra.jpg';
 const testimonials = [
   {
     avatar: vikramAvatar,
-    text: "This brace eased my back pain within days — firm yet super comfortable. Delivery was quick and customer support even checked in to make sure I was wearing it right.",
+    text: "This shirt has a great fit and classy look — perfect for office wear. The fabric quality is excellent, and it didn’t shrink after washing.",
     name: "Vikram Mehta",
     location: "Ahmedabad, India",
   },
   {
     avatar: priyaAvatar,
-    text: "Great support without restricting movement—perfect for yoga. Loved the breathable material and fast response from the team when I had a sizing doubt.",
-    name: "Priya Nair",
-    location: "Maharashtra, India",
+    text: "This dress fits perfectly and feels so soft on the skin — stylish yet very comfortable. Delivery was quick, and the quality exceeded my expectations",
+    location: "karnataka, India",
   },
   {
     avatar: ravindraAvatar,
-    text: "Excellent fit and relief from neck pain. Came with clear instructions and thoughtful packaging. MS Fort’s service was prompt and genuinely caring.",
+    text: "I was impressed with how soft and breathable this fabric is — perfect for hot weather. It feels comfortable even after wearing it for long hours.",
     name: "Ravindra Kulkarni",
     location: "Gujarat, India",
   },
