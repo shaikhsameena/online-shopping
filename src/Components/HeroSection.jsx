@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import img1 from "../assets/S1.jpg";
-import img2 from "../assets/S2.jpg";
+import img1 from "../assets/s1.jpg";
+import img2 from "../assets/s2.jpg";
 import img3 from "../assets/s3.jpg";
 import "./HeroSection.css";
 
